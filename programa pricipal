@@ -1,0 +1,40 @@
+
+package teste;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class Program {
+    
+    public static void main(String[] args) {
+		
+		Locale.setDefault(Locale.US);
+		Scanner input = new Scanner(System.in);
+        GastosVera vera = new GastosVera();
+		String tipoDoGasto;
+		int formaPagamento;
+		int data;
+		double valor;
+		
+		System.out.println("digite o tipo do gasto: ");
+		tipoDoGasto = input.nextLine();
+        vera.gasto(tipoDoGasto);
+        System.out.println("digite a data do gasto: ");
+        data = input.nextInt();
+        vera.data(data);
+        System.out.println("digite o valor do gasto: ");
+        valor = input.nextDouble();
+        vera.valor(valor);
+        System.out.println("digite o tipo de pagamento: \n1- dinheiro\n2- cheque\n3- cartão\n4- cheque pré");
+        formaPagamento = input.nextInt();
+        vera.Pagamento(formaPagamento);
+
+        vera.status();
+
+
+          
+
+		
+	}
+
+}
