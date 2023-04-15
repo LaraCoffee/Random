@@ -1,0 +1,49 @@
+package teste;
+
+public class GastosVera {
+	String tipoGasto;
+	int dataDoGasto;
+	double totalGasto;
+	String formaDePagamento;
+	
+	
+
+	public void gasto(String tipoGasto) {
+		this.tipoGasto = tipoGasto;
+	}
+
+	public void data(int data) {
+		this.dataDoGasto = data;
+	}
+	
+	public void valor(double valor) {
+		this.totalGasto += valor;
+	}
+	
+	
+	public void Pagamento(int numero) {
+		if(numero == 1) {
+			this.formaDePagamento = "dinheiro";
+		}else if(numero == 2) {
+			this.formaDePagamento = "cheque";
+		}else if(numero == 3) {
+			this.formaDePagamento = "cartao";
+		}else if(numero == 4) {
+			this.formaDePagamento = "cheque pre";
+		}
+		
+		
+	}
+
+    public void status(){
+        System.out.println("tipo do gasto "+ this.tipoGasto);
+        System.out.println("data "+ this.dataDoGasto);
+        System.out.println("total gasto "+ this.totalGasto);
+        System.out.println("forma de pagamneto "+ this.formaDePagamento);
+    }
+	
+	
+	
+	
+
+}
